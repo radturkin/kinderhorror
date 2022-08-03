@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies API</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-<header>
-  <h1>Movies API</h1>
-  <h2>Kinder horror films where no animals are harmed</h2>
+<%- include('../partials/header') %> 
+
+  <header>
+    <h1>Kinder Horror Films API</h1>
+    <h2>An API for "kinder" horror films in which no animals are harmed</h2>
+  </header>
+
   <form>
-    <input id="backButton" type="button" value="Pick Another Movie" onclick="history.back()">
-   </form></header>
+    <input id="backButton" type="button" value="Pick Another Movie"
+    onclick="window.location.href = '/' ">    
+     <!-- onclick="history.back()" -->
+  </form>
+  
   <div>
-    <h2 class="filmcontent" id="filmTitle">Film: <%= title %></h2>
-    
-    <p class="filmcontent" id="filmReview">Review: <%= review %></p>
-    <p class="filmcontent" id="filmSummary">Summary: <%= summary %></p>
-    <p class="filmcontent" id="forKids">For Kids: <%= kids %></p>
-    <p class="filmcontent" id="rating">Rating: <%= rating %></p>
-    <p class="filmcontent" id="triggerWarnings">Trigger Warnings:  <%= triggers %></p>
-      <a class="filmcontent" id=imdbLink href="<%= imdblink %>">imdb</a>
-      <a class="filmcontent" id=wikiLink href="<%= wikilink %>">wiki</a>
-      <iframe width="560" height="315" src=<%= trailer %>
+    <h2 class="filmcontent" id="filmTitle"><%= movie.title %></h2>
+    <p class="filmcontent" id="filmReview"><span class="movie-details">Review:</span> <%= movie.review %></p>
+    <p class="filmcontent" id="filmSummary"><span class="movie-details">Summary:</span> <%= movie.summary %></p>
+    <p class="filmcontent" id="forKids"><span class="movie-details">For Kids:</span> <%= movie.kids %></p>
+    <p class="filmcontent" id="rating"><span class="movie-details">Rating:</span> <%= movie.rating %></p>
+    <p class="filmcontent" id="triggerWarnings"><span class="movie-details">Trigger Warnings:</span> <%= movie.triggers %></p>
+      <a class="filmcontent" id=imdbLink href="<%= movie.imdblink %>">imdb</a>
+      <a class="filmcontent" id=wikiLink href="<%= movie.wikilink %>">wiki</a>
+      <iframe width="560" height="315" src=<%= movie.trailer %>
       title="YouTube video player" frameborder="0" allow="accelerometer; 
       autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
 <!--     why doesnt this work <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </iframe> -->
   </div>
-  
-</body>
-</html>
+
+  <%- include('../partials/footer') %>
