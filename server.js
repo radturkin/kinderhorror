@@ -154,7 +154,7 @@ app.get('/api/:name', function(req, res) {
   //still can't get random to work in the render template, shows only the name of the film
   if (movieName === "random") {
     const randomNum = Math.floor(Math.random() * Object.values(movies).length)
-    movieName = (Object.values(movies)[randomNum]).toLowerCase()
+    movieName = (Object.values(movies)[randomNum]["title"]).toLowerCase()
   }
        
   //this works!
@@ -171,11 +171,14 @@ app.get('/api/:name', function(req, res) {
       rating: movies[movieName]["rating"],
       trigger: movies[movieName]["trigger warnings"],
       imdblink: movies[movieName]["imdb link"],
-      wikilink: movies[movieName]["wiki link"]
-      // trailer: movies[movieName]["trailer link"]
+      wikilink: movies[movieName]["wiki link"],
+      trailer: movies[movieName]["trailer link"],
+
 
 
     })
+    console.log(movies[movieName]["trailer link"])
+
 
   
 
