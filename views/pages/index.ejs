@@ -13,34 +13,7 @@
 </head>
 <body>
   <header>
-    <h1>Movies API</h1>
-    <h2>Kinder horror films where no animals are harmed</h2>
-    <nav>
-
-      <!-- use for loop to generate options list -->
-        <form onsubmit="return mysubmit();">
-        <label for="film">Select a Film:</label>
-
-        <!-- <select name="films" id="option"> -->
-          <select onchange="location = this.value;">
-
-
-          <option value="A Girl Walks Home Alone at Night">A Girl Walks Home Alone at Night</option>
-          <option value="Willy’s Wonderland">Willy’s Wonderland</option>
-          <option value="Vivarium">Vivarium</option>
-          <option value="Paperhouse">Paperhouse</option>
-          <option value="Be My Cat">Be My Cat</option>
-          <option value="Mr. Harrigans Phone">Mr. Harrigans Phone</option>
-          <option value="A Nightmare on Elm Street 3: Dream Warriors">A Nightmare on Elm Street 3: Dream Warriors</option>
-          <option value="The Black Phone">The Black Phone</option>
-        </select>
-        <input type="submit" id="submit" value="Submit">
-      </form>
-
-      <!-- <a href="localhost:8000/api/random">you pick</a> -->
-      <button><a href="http://localhost:8000/random" target="_blank">Random</a></button>
-
-    </nav>
+    <%- include('../partials/header') %>
 
   </header>
 

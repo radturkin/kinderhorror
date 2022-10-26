@@ -10,6 +10,7 @@ const PORT = 8000
 // const movieDB = XLSX.readFile("kinderhorror.xlsx")
 
 app.set("view engine", "ejs");
+// app.set("views", "path/to/views")
 app.use(express.static('public'));
 app.use(cors());
 
