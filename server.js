@@ -148,7 +148,7 @@ app.get('/', (request, response) => {
 
 // *** GET Routes - display pages ***
 // // Root Route
-app.get('/api/:name', function(req, res) {
+app.get('/:name', function(req, res) {
   let movieName = req.params.name.toLowerCase()
   console.log("finding your movie: " + movieName)
   //still can't get random to work in the render template, shows only the name of the film
@@ -204,5 +204,6 @@ app.get('/api/:name', function(req, res) {
 // })
 
 app.listen(process.env.PORT || PORT, () => {
+
   console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
 })

@@ -3,9 +3,34 @@ body {
     background: #092871;
     display:block;
   }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
   
   h1 {
     color: #f23c36;
+  }
+  header h2 {
+    color: #ffc857;
+    margin: 0 5px;
+
+  }
+
+  nav {
+    float:left;
+    width: 100vww;
+    margin: 50px;
+  }
+
+  button, form {
+    float: left;
+    margin: 5px;
+    color: #ffc857;
+    text-decoration: none;
+
   }
   
   div {
