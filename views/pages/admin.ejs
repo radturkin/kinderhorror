@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <%- include('../partials/header') %>
+
+  </header>
+  <h1>Add films to the database using the form below</h1>
+  <!-- add a scary rating to films -->
+    <form class="admin" action="/film" method="POST">
+        <span>Title of film: </span>
+        <input class="short" type="text" placeholder="title" name="title">
+        <span>Review of film: </span>
+        <input class="sentences" type="text" placeholder="review"name="review">
+        <span>Summary of film: </span>
+        <input class="sentences" type="text" placeholder="summary"name="summary">
+        <span>Rating out of 5: </span>
+        <input type="number" placeholder="rating"name="rating">
+        <span>Is this film for kids? or is this film safe for kids? </span>
+        <input class="short" type="text" placeholder="for kids"name="forKids">
+        <span>List any possible trigger warnings: </span>
+        <input class="short" type="text" placeholder="trigger warnings"name="triggers">
+        <span>Copy in link for the film: </span>
+        <input type="url" placeholder="imdb link"name="imdb">
+        <input type="url" placeholder="wiki link"name="wiki">
+        <input type="url" placeholder="trailer link"name="trailer">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <ul class="films">
+      <!-- Loop through quotes -->
+      <% for(var i = 0; i < films.length; i++) {%>
+          <li class="films">
+          <!-- Output name from the iterated quote object -->
+          <span><%= films[i].title %></span>
+          <!-- Output quote from the iterated quote object -->
+          </li>
+      <% } %>
+  </ul>
+  <form onsubmit="return mysubmit();">
+    <label for="films">Select a Film:</label>
+
+      <select onchange location = this.value;>
+
+      <% for(var i = 0; i < films.length; i++) {%>
+        <li class="films">
+        <!-- Output name from the iterated quote object -->
+        <option value="films[i].title"><%= films[i].title %></option>
+        <!-- Output quote from the iterated quote object -->
+        </li>
+    <% } %>
+      </select>
+      </form>
+  
+</body>
+
+
+
+</html>

@@ -4,12 +4,19 @@
 
       <!-- use for loop to generate options list -->
         <form onsubmit="return mysubmit();">
-        <label for="film">Select a Film:</label>
+        <label for="films">Select a Film:</label>
 
-          <select onchange="location = this.value;">
-
+          <select onchange="window.location.href = this.value";>
           <option value="select">Select a film</option>
+          <% for(var i = 0; i < films.length; i++) {%>
 
+            <li class="films">
+            <!-- Output name from the iterated quote object -->
+            <option value="<%= films[i].title %>"><%= films[i].title %></option>
+            <!-- Output quote from the iterated quote object -->
+            </li>
+        <% } %>
+<!-- 
           <option value="A Girl Walks Home Alone at Night">A Girl Walks Home Alone at Night</option>
           <option value="Willy’s Wonderland">Willy’s Wonderland</option>
           <option value="Vivarium">Vivarium</option>
@@ -18,7 +25,7 @@
           <option value="Mr. Harrigans Phone">Mr. Harrigans Phone</option>
           <option value="A Nightmare on Elm Street 3: Dream Warriors">A Nightmare on Elm Street 3: Dream Warriors</option>
           <option value="The Black Phone">The Black Phone</option>
-        </select>
+        </select> -->
         <!-- <input type="submit" id="submit" value="Submit"> -->
       </form>
 

@@ -61,3 +61,43 @@ body {
       text-align:center;
   
   }
+
+.admin {
+
+  background: #ffc857;
+  margin: atuo;
+  position: fixed;
+  width: 80%vww;
+  top:30%;
+  left: 30%;
+  padding: 20px;
+  border-radius: 5%;;
+
+}
+
+input {
+  display:flex;
+  margin: 0 auto;
+  width: 80%;
+  padding: 5px;
+}
+
+/* .sentences {
+  width: 90%;
+  height: 50px;
+} */
+
+span {
+  color: black;
+}
+  
+submit {
+  color:black;
+}
+
+#backButton {
+  text-align: center;
+  width: 135px;
+  padding: 3px 4px 3px 9px;
+  margin: 0 auto;
+}
