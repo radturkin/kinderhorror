@@ -59,7 +59,7 @@ app.get("/:name", function (req, res, next) {
     
   
     let movie = (results[0])
-    console.log(movie.title)
+    console.log(movie.trailer)
     // res.json(movie)
     // res.render('pages/api'
     res.render('pages/api', {
