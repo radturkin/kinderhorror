@@ -8,18 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- <link rel="stylesheet" href="/css/normalize.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <%- include('../partials/header') %>
-
-  </header>
+    <%- include('../partials/header') %></header>
 
     <!-- <p>Please use [https://movies-api.jpcanindo.repl.co/api/MOVIENAMEHERE]</p> -->
  
-  
+  <!--add movie of the month-->
+  <div>
+
+    <h1>Movie of the Month</h1>
+
+    <h2 class="filmcontent" id="filmTitle">Film: <%= motmtitle %></h2>
+    
+    <p class="filmcontent" id="filmReview">Review: <%= motmreview %></p>
+    <p class="filmcontent" id="filmSummary">Summary: <%= motmsummary %></p>
+    <p class="filmcontent" id="forKids">For Kids: <%= motmkids %></p>
+    <p class="filmcontent" id="rating">Rating: <%= motmrating %></p>
+    <p class="filmcontent" id="triggerWarnings">Trigger Warnings:  <%= motmtriggers %></p>
+      <a class="filmcontent" id=imdbLink href="<%= motmimdblink %>">imdb</a>
+      <a class="filmcontent" id=wikiLink href="<%= motmwikilink %>">wiki</a>
+      <iframe width="560" height="315" src=<%= motmtrailer %>
+      title="YouTube video player" frameborder="0" allow="accelerometer; 
+      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe> -->
+<!--     why doesnt this work <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </iframe> -->
+  </div>
+    
 </body>
 
 

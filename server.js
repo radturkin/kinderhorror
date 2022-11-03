@@ -4,6 +4,7 @@ const ejs = require('ejs')
 
 const bodyParser = require("body-parser")
 const MongoClient = require('mongodb').MongoClient
+const movieOfTheMonth = 23
 
 //connect to .env file for privacy
 require("dotenv").config();
@@ -38,7 +39,20 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
           db.collection('kinderhorror').find().toArray()
 
           .then(results => {
-            res.render('pages/index.ejs', {films: results})
+
+            res.render('pages/index.ejs', {films: results,
+              motmtitle: results[22].title,
+              motmreview: results[22].review,
+              motmsummary: results[22].summary,
+              motmkids: results[22].forKids,
+              motmrating: results[22].rating,
+              motmtriggers: results[22].triggers,
+              motmimdblink: results[22].imdb,
+              motmwikilink: results[22].wiki, 
+              motmtrailer: results[22].trailer,
+            })
+            console.log(results[22].title)
+
                   })
                   .catch(error => console.error(error))
 
@@ -47,6 +61,10 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
 // // // Root Route
 app.get("/:name", function (req, res, next) {
   let movieTitle = req.params.name
+  // if (movieTitle === "random") {
+  //       const randomNum = Math.floor(Math.random() * Object.values(movies).length)
+  //       movieTitle = (Object.values(movies)[randomNum]["title"])
+  //     }
 
   db.collection("kinderhorror")
     .find({ title: movieTitle })
@@ -57,8 +75,7 @@ app.get("/:name", function (req, res, next) {
   
     let movie = (results[0])
     console.log(movie.trailer)
-    // res.json(movie)
-    // res.render('pages/api'
+  
     res.render('pages/api', {
       title: movie.title,
       review: movie.review,
