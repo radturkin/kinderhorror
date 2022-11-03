@@ -68,7 +68,7 @@ app.get("/:name", function (req, res, next) {
       summary: movie.summary,
       kids: movie.forKids,
       rating: movie.rating,
-      trigger: movie.trigger,
+      triggers: movie.triggers,
       imdblink: movie.imdb,
       wikilink: movie.wiki, 
       trailer: movie.trailer,
