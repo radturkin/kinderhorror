@@ -1,17 +1,20 @@
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
-const { movies } = require("./movies");
+// const { movies } = require("./movies");
 
 const bodyParser = require("body-parser")
 const MongoClient = require('mongodb').MongoClient
-const connectionString='mongodb+srv://rturk:COuAFe6mCDkpmbH7@cluster0.5p2ialv.mongodb.net/?retryWrites=true&w=majority'
+// const connectionString='mongodb+srv://rturk:COuAFe6mCDkpmbH7@cluster0.5p2ialv.mongodb.net/?retryWrites=true&w=majority'
 
+//connect to .env file for privacy
+require("dotenv").config();
  
 // const cors = require('cors')
-const PORT = 8000
+// const PORT = 8000
+const PORT = process.env.PORT || 8000;
 
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
+MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
    .then(client => {
     console.log('Connected to Database')
     const db = client.db('films')
@@ -84,7 +87,7 @@ app.get("/:name", function (req, res, next) {
         .catch(error => console.error(error))
     })
    
-    app.listen(8000, function() {
+    app.listen(process.env.PORT || PORT, function() {
         console.log("listening on port 8000")
     })
 
@@ -148,3 +151,4 @@ app.get("/:name", function (req, res, next) {
 
 //   console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
 // })
+
