@@ -1,17 +1,14 @@
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
-// const { movies } = require("./movies");
 
 const bodyParser = require("body-parser")
 const MongoClient = require('mongodb').MongoClient
-// const connectionString='mongodb+srv://rturk:COuAFe6mCDkpmbH7@cluster0.5p2ialv.mongodb.net/?retryWrites=true&w=majority'
 
 //connect to .env file for privacy
 require("dotenv").config();
  
 // const cors = require('cors')
-// const PORT = 8000
 const PORT = process.env.PORT || 8000;
 
 MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
