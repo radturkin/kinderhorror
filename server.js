@@ -24,19 +24,13 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
     app.use(bodyParser.urlencoded({ extended: true}))
     //to read json
     app.use(bodyParser.json())
-//mdae change to line 31 {films: results}
 
     app.get('/admin', (req, res) => {
       res.render('pages/admin.ejs')
-      // db.collection('kinderhorror').find().toArray()
-      //   .then(results => {
-      //     res.render('pages/admin.ejs', {films: results})
-      //   })
-      //   .catch(error => console.error(error))
     })
 
-        })
-        app.get('/', (req, res) => {
+        
+    app.get('/', (req, res) => {
           db.collection('kinderhorror').find().toArray()
 
           .then(results => {
@@ -69,15 +63,7 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
             let movie = results[randomNum]
             console.log("User wanted a random film title: " + movie.title)
             res.render('pages/api', { movie: movie
-              // title: movie.title,
-              // review: movie.review,
-              // summary: movie.summary,
-              // kids: movie.forKids,
-              // rating: movie.rating,
-              // triggers: movie.triggers,
-              // imdblink: movie.imdb,
-              // wikilink: movie.wiki, 
-              // trailer: movie.trailer,
+           
             })
           })
           .catch(error => console.error(error))
@@ -88,18 +74,9 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
       .then(results => {
         let movie = results[0]
         console.log("User selected " + movie.title)
-        // res.json(movie)
-        // res.render('pages/api'
+      
         res.render('pages/api', { movie: movie
-          // title: movie.title,
-          // review: movie.review,
-          // summary: movie.summary,
-          // kids: movie.forKids,
-          // rating: movie.rating,
-          // triggers: movie.triggers,
-          // imdblink: movie.imdb,
-          // wikilink: movie.wiki, 
-          // trailer: movie.trailer,
+        
         })
       })
       .catch(error => console.error(error))
@@ -111,17 +88,22 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
           console.log(result)        
           res.redirect("/")
         })
+        
         .catch(error => console.error(error))
-    })
-   
+    
+      })
+
     app.listen(process.env.PORT || PORT, function() {
         console.log("listening on port 8000")
     })
+  })
 
-  
   .catch(error => console.error(error))
 
 
+
+  // 
+  
 
 // app.set("view engine", "ejs");
 // // app.set("views", "path/to/views")
