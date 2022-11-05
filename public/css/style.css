@@ -1,42 +1,92 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    background: #092871;
-    display:block;
-  }
+  font-family: 'Poor Story', Helvetica, Arial, cursive, sans-serif;
+  background: #021031;
+}
 
   header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
   }
   
   h1 {
+    flex: initial;
+    width: 25%;
     color: #f23c36;
+    font-family: 'Creepster', Helvetica, Arial, cursive, sans-serif;
+    font-size: 2.5rem;
+
   }
+
   header h2 {
     color: #ffc857;
     margin: 0 5px;
 
   }
 
+  .h2Admin {
+    margin: 40px auto;
+  }
+
   nav {
-    float:left;
+    /* float:left; */
+    text-align: center;
     width: 100vww;
     margin: 50px;
   }
 
-  button, form {
-    float: left;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  form {
+    /* float: left; */
     margin: 5px;
     color: #ffc857;
     text-decoration: none;
+    font-size: 2rem;
 
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    /* width: 80%; */
+    padding: 5px;
+  }
+
+  button,
+  #backButton {
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #f23c36;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+  }
+
+  button:hover,
+  #backButton:hover {
+    cursor: pointer;
   }
   
   div {
     display:flex;
     flex-direction: column;
-    margin:20px auto;
+    margin:50px auto;
     width: 80%;
     height:80%;
     justify-content: center;
@@ -44,9 +94,19 @@ body {
     background: #ffc857;
     color: 323031;
     border-radius: 20px;
-    padding: 10px;
+    padding: 70px 90px;
+    font-size: 1.5rem;
     
-    
+  }
+
+  div h2 {
+    font-family: 'Creepster', Helvetica, Arial, cursive, sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .movie-details {
+    font-weight: 800;
   }
   
   /* p {
@@ -65,21 +125,16 @@ body {
 .admin {
 
   background: #ffc857;
-  margin: atuo;
-  position: fixed;
-  width: 80%vww;
+  margin: 10px auto 50px auto;
+  /* margin-top: 0; */
+  text-align: center;
+  /* position: fixed; */
+  width: 80%;
   top:30%;
   left: 30%;
   padding: 20px;
   border-radius: 5%;;
 
-}
-
-input {
-  display:flex;
-  margin: 0 auto;
-  width: 80%;
-  padding: 5px;
 }
 
 /* .sentences {
@@ -93,11 +148,4 @@ span {
   
 submit {
   color:black;
-}
-
-#backButton {
-  text-align: center;
-  width: 135px;
-  padding: 3px 4px 3px 9px;
-  margin: 0 auto;
 }
