@@ -1,25 +1,17 @@
-    <h1>Movies API</h1>
-    <h2>Kinder horror films where no animals are harmed</h2>
-    <nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies API</title>
 
-      <!-- use for loop to generate options list -->
-        <form onsubmit="return mysubmit();">
-        <label for="films">Select a Film:</label>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poor+Story&family=Roboto&display=swap" rel="stylesheet">
 
-          <select onchange="window.location.href = this.value";>
-          <option value="select">Select a film</option>
-          <% for(var i = 0; i < films.length; i++) {%>
-
-            <li class="films">
-            <!-- Output name from the iterated quote object -->
-            <option value="<%= films[i].title %>"><%= films[i].title %></option>
-            <!-- Output quote from the iterated quote object -->
-            </li>
-        <% } %>
-          </select>
-      </form>
-<!-- this needs to be resolved in js or server.js -->
-      <!-- <button><a href="http://localhost:8000/random">Random</a></button> -->
-
-    </nav>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
 

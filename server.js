@@ -25,14 +25,15 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
     //to read json
     app.use(bodyParser.json())
 //mdae change to line 31 {films: results}
-   
-    app.get('/admin', (req, res) => {
-        db.collection('kinderhorror').find().toArray()
-          .then(results => {
-            res.render('pages/admin.ejs', {films: results})
 
-          })
-          .catch(error => console.error(error))
+    app.get('/admin', (req, res) => {
+      res.render('pages/admin.ejs')
+      // db.collection('kinderhorror').find().toArray()
+      //   .then(results => {
+      //     res.render('pages/admin.ejs', {films: results})
+      //   })
+      //   .catch(error => console.error(error))
+    })
 
         })
         app.get('/', (req, res) => {
@@ -59,45 +60,57 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
                 })
 
 // // // Root Route
-app.get("/:name", function (req, res, next) {
-  let movieTitle = req.params.name
-  // if (movieTitle === "random") {
-  //       const randomNum = Math.floor(Math.random() * Object.values(movies).length)
-  //       movieTitle = (Object.values(movies)[randomNum]["title"])
-  //     }
-
-  db.collection("kinderhorror")
-    .find({ title: movieTitle })
-    .toArray()
-
-    .then(results => {
-    
-  
-    let movie = (results[0])
-    console.log(movie.trailer)
-  
-    res.render('pages/api', {
-      title: movie.title,
-      review: movie.review,
-      summary: movie.summary,
-      kids: movie.forKids,
-      rating: movie.rating,
-      triggers: movie.triggers,
-      imdblink: movie.imdb,
-      wikilink: movie.wiki, 
-      trailer: movie.trailer,
+    app.get("/:name", function (req, res, next) {
+      let movieTitle = req.params.name
+      if (movieTitle === "random") {
+        db.collection("kinderhorror").find().toArray()
+          .then(results => {
+            const randomNum = Math.floor(Math.random() * results.length)
+            let movie = results[randomNum]
+            console.log("User wanted a random film title: " + movie.title)
+            res.render('pages/api', { movie: movie
+              // title: movie.title,
+              // review: movie.review,
+              // summary: movie.summary,
+              // kids: movie.forKids,
+              // rating: movie.rating,
+              // triggers: movie.triggers,
+              // imdblink: movie.imdb,
+              // wikilink: movie.wiki, 
+              // trailer: movie.trailer,
+            })
+          })
+          .catch(error => console.error(error))
+      }
+      db.collection("kinderhorror")
+      .find({ title: movieTitle })
+      .toArray()
+      .then(results => {
+        let movie = results[0]
+        console.log("User selected " + movie.title)
+        // res.json(movie)
+        // res.render('pages/api'
+        res.render('pages/api', { movie: movie
+          // title: movie.title,
+          // review: movie.review,
+          // summary: movie.summary,
+          // kids: movie.forKids,
+          // rating: movie.rating,
+          // triggers: movie.triggers,
+          // imdblink: movie.imdb,
+          // wikilink: movie.wiki, 
+          // trailer: movie.trailer,
+        })
+      })
+      .catch(error => console.error(error))
     })
-  })
-    .catch(error => console.error(error))
-
-  })
-
 
     app.post("/film", (req, res)=>{
         filmCollection.insertOne(req.body)
         .then(result => {
-            console.log(result)        })
-            res.redirect("/")
+          console.log(result)        
+          res.redirect("/")
+        })
         .catch(error => console.error(error))
     })
    
@@ -105,7 +118,7 @@ app.get("/:name", function (req, res, next) {
         console.log("listening on port 8000")
     })
 
-  })
+  
   .catch(error => console.error(error))
 
 
@@ -114,52 +127,6 @@ app.get("/:name", function (req, res, next) {
 // // app.set("views", "path/to/views")
 // app.use(express.static('public'));
 // app.use(cors());
-
-
-// app.post('/admin', (req, res) => {
-//   console.log('Hellooooooooooooooooo!')
-// })
-
-
-// app.get('/', (request, response) => {
-//   response.render('pages/index.ejs');
-//   // response.sendFile(__dirname + '/views/index.ejs')
-// })
-
-// // *** GET Routes - display pages ***
-// // // Root Route
-// app.get('/:name', function(req, res) {
-//   let movieName = req.params.name.toLowerCase()
-//   console.log("finding your movie: " + movieName)
-//   //still can't get random to work in the render template, shows only the name of the film
-//   if (movieName === "random") {
-//     const randomNum = Math.floor(Math.random() * Object.values(movies).length)
-//     movieName = (Object.values(movies)[randomNum]["title"]).toLowerCase()
-//   }
-       
-//     res.render('pages/api', {
-//       title: movies[movieName]["title"],
-//       review: movies[movieName]["review"],
-//       summary: movies[movieName]["summary"],
-//       kids: movies[movieName]["for kids"],
-//       rating: movies[movieName]["rating"],
-//       trigger: movies[movieName]["trigger warnings"],
-//       imdblink: movies[movieName]["imdb link"],
-//       wikilink: movies[movieName]["wiki link"], 
-//       trailer: movies[movieName]["trailer link"],
-
-
-
-//     })
-//     console.log(movies[movieName]["trailer link"])
-
-
-  
-
-// });
-
-
-
 
 // app.listen(process.env.PORT || PORT, () => {
 
