@@ -36,17 +36,10 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
           .then(results => {
 
             res.render('pages/index.ejs', {films: results,
-              motmtitle: results[22].title,
-              motmreview: results[22].review,
-              motmsummary: results[22].summary,
-              motmkids: results[22].forKids,
-              motmrating: results[22].rating,
-              motmtriggers: results[22].triggers,
-              motmimdblink: results[22].imdb,
-              motmwikilink: results[22].wiki, 
-              motmtrailer: results[22].trailer,
+              motm: results[22]
+            
             })
-            console.log(results[22].title)
+            console.log(results[22])
 
                   })
                   .catch(error => console.error(error))
