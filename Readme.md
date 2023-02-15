@@ -18,33 +18,13 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template<!-- PROJECT SHIELDS -->
-5
-<!--
-6
-*** I'm using markdown "reference style" links for readability.
-7
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-8
-*** See the bottom of this document for the declaration of the reference variables
-9
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-10
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
-11
---></h3>
+  <h3 align="center">KinderHorror Movie Review Database</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    A Horror Movie Review Web API consisting only of films where no animals are harmed
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <br />
   </p>
 </div>
 
