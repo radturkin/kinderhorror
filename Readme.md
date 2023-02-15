@@ -66,6 +66,10 @@
 I love horror films, but I don't like seeing animals getting hurt on screen, (real or fictional), so I wanted to create a database where others that also enjoy the genre but dislike cruelty, could get movie recommendations to discover or revisit films, without risking the chance of witnessing such traumas. 
 This is currently the first version of this project, but there are many updates and feature enhancements to come.
 
+As a public user you are able to select films from the dropdown, read about them, access links and watch trailers, and in sometimes if you are lucky the entire film
+
+As a private authorized user/reviewer you are able to add films to the Database. This web app uses MongoDB Atlas for the database.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,18 +94,21 @@ This project was built with
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+You can enjoy viewing this app <a href="https://web-production-9394.up.railway.app/" > live </a>
 
-### Prerequisites
+Currently this web app deployed to run on railway, due to the limits of the free account options, there are times at the end of the month when this app is unavailable, we are in the process of finding a better hosting platform for round the clock access. 
+
+You can also view the app in the live demo (under construction)
+
+<!-- ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
   ```
-
-### Installation
+ -->
+<!-- ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -121,14 +128,11 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+ -->
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Live Demo (under construction) If you are unable to access the link in Getting Started or wish to view the live demo, please check back at the start of the month.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
