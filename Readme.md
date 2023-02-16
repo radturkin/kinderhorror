@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://web-production-9394.up.railway.app/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="kinderhorrorlogo.jpg" alt="Logo" width="325" height="50">
   </a>
   <h3 align="center">Kinder Horror Films API</h3>
 
@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://web-production-9394.up.railway.app/)
 
 I love horror films, but I don't like seeing animals getting hurt on screen, (real or fictional), so I wanted to create a database where others that also enjoy the genre but dislike cruelty, could get movie recommendations to discover or revisit films, without risking the chance of witnessing such traumas. 
 This is currently the first version of this project, but there are many updates and feature enhancements to come.
@@ -228,7 +228,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: movieapi.jpg
 [HTML]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [HTML-url]: [https://developer.mozilla.org/en-US/docs/Web/HTML]
 [CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
