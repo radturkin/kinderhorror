@@ -95,16 +95,5 @@ MongoClient.connect(process.env.connectionString, { useUnifiedTopology: true })
 
 
 
-  // 
-  
-
-// app.set("view engine", "ejs");
-// // app.set("views", "path/to/views")
-// app.use(express.static('public'));
-// app.use(cors());
-
-// app.listen(process.env.PORT || PORT, () => {
-
-//   console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
 // })
 
