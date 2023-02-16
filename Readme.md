@@ -96,7 +96,7 @@ This project was built with
 
 You can enjoy viewing this app <a href="https://web-production-9394.up.railway.app/" > live </a>
 
-Currently this web app deployed to run on railway, due to the limits of the free account options, there are times at the end of the month when this app is unavailable, we are in the process of finding a better hosting platform for round the clock access. 
+Currently this web app is deployed to run on railway. Due to the limits of the free account options, there are times at the end of the month when this app is unavailable, we are in the process of finding a better hosting platform for round the clock access. 
 
 You can also view the app in the live demo (under construction)
 
@@ -141,16 +141,17 @@ Live Demo (under construction) If you are unable to access the link in Getting S
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Add Login for reviewer access
+- [ ] Add edit feature to make corrections to entries
+- [ ] Resolve responsiveness bug
+- [ ] Add search/sorting option
+- [ ] Webscrape movie posters for more appealing movie selection interface
+- [ ] Add user login feature
+    - [ ] Create setting options for a more customized movie suggestion experience
+    - [ ] Create a saved, and viewed list for users to sort films
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
+<!-- See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+ -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -183,11 +184,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+<!-- ## Contact -->
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+<!-- Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,6 +197,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+This project was created by Rad Turkin and JP Canindo
+
+<!-- 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)
@@ -205,7 +209,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [React Icons](https://react-icons.github.io/react-icons/search) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
