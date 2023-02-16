@@ -1,5 +1,5 @@
 
-<a name="readme-top"></a>
+
 
 
 <!-- [![Contributors][contributors-shield]][contributors-url]
@@ -14,11 +14,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://web-production-9394.up.railway.app/">
+  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">KinderHorror Movie Review Database</h3>
+  <h3 align="center">Kinder Horror Films API</h3>
 
   <p align="center">
     A Horror Movie Review Web API consisting only of films where no animals are harmed
@@ -179,20 +178,20 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
- -->
+
 <!-- CONTACT -->
 <!-- ## Contact -->
 
 <!-- Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
+<!-- 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
  -->
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
